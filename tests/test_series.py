@@ -57,7 +57,7 @@ def test_fibo_series_int2():
     expected = 13
     assert actual == expected
 #test 3
-def test_fibo_series_int2():
+def test_fibo_series_int3():
     actual= fibo_series(0)
     expected = 0
     assert actual == expected
@@ -107,12 +107,12 @@ def test_sum_series2():
     expected = 4
     assert actual == expected
 
-def test_sum_series2():
+def test_sum_series3():
     actual = sum_series(4,0,1)
     expected = 3
     assert actual == expected
 
-def test_sum_series3():
+def test_sum_series4():
     actual =sum_series(4,5,6)
     expected ="""please enter x,y=0,1 for fibonacci series or enter x,y=2,1 for lucas series """
     assert actual == expected
