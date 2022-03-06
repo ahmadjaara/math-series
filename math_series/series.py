@@ -87,12 +87,12 @@ def sum_series(k,x=0,y=1):
                 return sum_series(k-1,x,y)+sum_series(k-2,x,y)
     except TypeError:
        return(False) 
-print(
-sum_series(0,2,3),
-sum_series(1,2,3),
-sum_series(2,2,3),
-sum_series(3,2,3),
-sum_series(4,2,3),
-sum_series(5,2,3),
-sum_series(6,2,3))
+# print(
+# sum_series(0,2,3),
+# sum_series(1,2,3),
+# sum_series(2,2,3),
+# sum_series(3,2,3),
+# sum_series(4,2,3),
+# sum_series(5,2,3),
+# sum_series(6,2,3))
 
