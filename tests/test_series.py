@@ -37,6 +37,8 @@ parametr==> x,y
 
 output: if x,y=0,1 ==> output fibo_series(number) ==> 0,1,1,2,35,8,13
         if x,y=2,1 ==> output luc_series(number) ==> 2,1,3,4,7,11,18
+        x,y=any value  a new series creation which start with x and y 
+        if x,y=5,6 ==> output ==> 5,6,11,17,28,45,73 
 
 """
 
@@ -61,7 +63,12 @@ def test_fibo_series_int3():
     actual= fibo_series(0)
     expected = 0
     assert actual == expected
-#test 4 type error for string input
+#test 4
+def test_fibo_series_int3():
+    actual= fibo_series(1)
+    expected = 1
+    assert actual == expected
+#test 5 type error for string input
 def test_fibo_series_str():
     actual =fibo_series("str")
     expected = False
@@ -88,7 +95,12 @@ def test_luc_number_int3():
     actual =luc_number(0)
     expected = 2
     assert actual == expected
-#test 4 type error for string input
+#test 4
+def test_luc_number_int3():
+    actual =luc_number(1)
+    expected = 1
+    assert actual == expected
+#test 5 type error for string input
 def test_luc_number_str():
     actual =fibo_series("str")
     expected = False
@@ -113,7 +125,35 @@ def test_sum_series3():
     assert actual == expected
 
 def test_sum_series4():
-    actual =sum_series(4,5,6)
-    expected ="""please enter x,y=0,1 for fibonacci series or enter x,y=2,1 for lucas series """
+    actual =sum_series(0,5,6)
+    expected =5
     assert actual == expected
+
+def test_sum_series5():
+    actual =sum_series(2,5,6)
+    expected =11
+    assert actual == expected
+
+def test_sum_series6():
+    actual =sum_series(3,5,6)
+    expected =17
+    assert actual == expected
+
+def test_sum_series7():
+    actual =sum_series(1,10,6)
+    expected =6
+    assert actual == expected
+
+def test_sum_series8():
+    actual =sum_series(4,10,6)
+    expected =38
+    assert actual == expected
+
+def test_sum_series_str():
+    actual =sum_series("lk",10,6)
+    expected =False
+    assert actual == expected
+
+
+
 

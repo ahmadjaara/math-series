@@ -60,13 +60,16 @@ def sum_series(k,x=0,y=1):
                 x,y==> two optional parameters will have default values of 0 and 1 
                       ==> these two parameter determine the series type 
                         ==> x,y=0,1   series type:fibonacci series
-                        ==> x,y=2,1   series type:lucas series  
+                        ==> x,y=2,1   series type:lucas series 
+                        ==> x,y=any value  a new series craetion which start with x and y  
 
-        output: integer element ==>for lucas or fibonacci series 
+        output: integer element ==>for lucas or fibonacci series or a new series 
         
         example 
             if x,y=0,1 (default value) ==> output fibo_series(k) ==> 0,1,1,2,35,8,13
             if x,y=2,1 ==> output luc_series(number) ==> 2,1,3,4,7,11,18
+            if x,y=5,6 ==> output ==> 5, 6, 11, 17, 28, 45, 73
+
 
     """
    
@@ -76,7 +79,20 @@ def sum_series(k,x=0,y=1):
         elif x==2 and y==1:
             return luc_number(k)
         else:
-            return """please enter x,y=0,1 for fibonacci series or enter x,y=2,1 for lucas series """
+            if k==0:
+                return x
+            elif k==1:
+                return y
+            else:
+                return sum_series(k-1,x,y)+sum_series(k-2,x,y)
     except TypeError:
        return(False) 
+print(
+sum_series(0,2,3),
+sum_series(1,2,3),
+sum_series(2,2,3),
+sum_series(3,2,3),
+sum_series(4,2,3),
+sum_series(5,2,3),
+sum_series(6,2,3))
 
