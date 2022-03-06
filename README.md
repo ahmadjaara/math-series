@@ -13,3 +13,4 @@ I make a 12 test 4 for each function.
 ### Url repo
 
 https://github.com/ahmadjaara/math-series/pull/1
+
