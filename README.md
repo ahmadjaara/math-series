@@ -12,4 +12,4 @@ I make a 17 test to test functions.
 
 ### Url repo
 
-https://github.com/ahmadjaara/math-series/pull/1
+https://github.com/ahmadjaara/math-series/pull/2
